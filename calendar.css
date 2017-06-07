@@ -528,7 +528,6 @@ body .calendar .fc-content .fc-view-month table tbody tr td.fc-widget-content {
     border: #fff solid 2px;
     background: #f5f5f5;
     margin: 3px 3px;
-    padding: 10px;
 }
 body .calendar .fc-content .fc-view-month table tbody tr td .fc-day-number {
     font-size: 24px;
