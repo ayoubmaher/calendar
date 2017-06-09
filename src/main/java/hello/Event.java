@@ -7,6 +7,14 @@ public class Event {
     private Date date;
     private String title;
     private String description;
+    private static int count=0;
+
+    public Event(Date date, String title, String description){
+        id=count++;
+        this.date=date;
+        this.title=title;
+        this.description=description;
+    }
 
     public Date getDate() {
         return date;
