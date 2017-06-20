@@ -8,6 +8,7 @@ import java.util.Date;
 import static java.lang.System.out;
 
 public class EventForm {
+    private int id;
     private Date date;
     private String title;
     private String description;

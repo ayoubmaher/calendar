@@ -16,9 +16,10 @@ public class Database {
 
     public static void remove(int id){
         Event ev=null;
-        for(Event e: db)
-                if(e.getId()==id)
-                    ev=e;
+        for(Event e: db) {
+            if (e.getId() == id)
+                ev = e;
+        }
         if(ev!=null)
             db.remove(ev);
 
@@ -26,11 +27,12 @@ public class Database {
 
     public static void modify(Event ev){
         boolean found=false;
-        for(int i=0;i<db.size() && !found;i++)
-            if(db.get(i).getId()== ev.getId()) {
-                db.set(i,ev);
+        for(int i=0;i<db.size() && !found;i++) {
+            if (db.get(i).getId() == ev.getId()) {
+                db.set(i, ev);
                 found = true;
             }
+        }
     }
 
     public static List<Event> getAll() {
