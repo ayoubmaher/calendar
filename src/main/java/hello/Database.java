@@ -42,19 +42,6 @@ public class Database {
         return new ArrayList<>(db);
     }
 
-    public static List<Event> getAll(Date date) {
-        // TODO return list of events for the day and month
-        List<Event> list=new ArrayList<>();
-        for (Event e:db) {
-            if(e.getDate() == date){
-                list.add(e);
-            }
-
-        }
-        return new ArrayList<>(list);
-    }
-
-
     public static List<Event> get(LocalDate date) {
         List<Event> list=new ArrayList<>();
         for (Event e:db) {
