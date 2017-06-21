@@ -1,6 +1,9 @@
 package hello;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Database {
@@ -39,5 +42,28 @@ public class Database {
         return new ArrayList<>(db);
     }
 
+    public static List<Event> getAll(Date date) {
+        // TODO return list of events for the day and month
+        List<Event> list=new ArrayList<>();
+        for (Event e:db) {
+            if(e.getDate() == date){
+                list.add(e);
+            }
 
+        }
+        return new ArrayList<>(list);
+    }
+
+
+    public static List<Event> get(LocalDate date) {
+        List<Event> list=new ArrayList<>();
+        for (Event e:db) {
+            LocalDate eventDate = e.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            if(eventDate.isEqual(date)){
+                list.add(e);
+            }
+        }
+        return new ArrayList<>(list);
+
+    }
 }
